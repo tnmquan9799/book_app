@@ -18,6 +18,16 @@
 <p>
   <strong>Picture:</strong>
   <%= image_tag(@book.picture_url, width: 400) if @book.picture.present? %>
+  <h3>Reviews</h3>
+	<% @reviews.each do |review| %>
+	  <div>
+	    <strong><%= review.title %></strong>
+	    <br>
+	    <p><%= review.description %></p>
+	    <p><%= link_to 'Delete', reivew_path(review), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+	  </div>
+	<% end %>
+	<%= render partial: 'reviews/form', locals: { reivew: @review } %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
