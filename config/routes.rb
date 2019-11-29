@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  # devise_for :installs
   resources :reviews
   get 'pages/info'
 	root to: redirect('/books')

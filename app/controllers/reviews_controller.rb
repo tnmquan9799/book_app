@@ -10,8 +10,6 @@ class ReviewsController < ApplicationController
   # GET /reviews/1
   # GET /reviews/1.json
   def show
-    @reviews = @book.reviews.all
-    @review = @book.reviews.build
   end
 
   # GET /reviews/new
