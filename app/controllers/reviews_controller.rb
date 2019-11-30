@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_review, only: [:show, :edit, :update, :destroy, :review_owner]
+  before_action :authenticate_user!,except:[:index]
+  before_action :review_owner, only: [:edit, :update, :destroy]
 
   # GET /reviews
   # GET /reviews.json
@@ -19,6 +21,13 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
+  end
+
+  def review_owner
+    unless @review.user_id == current_user.id
+      flash[:notice] = 'Access denied as you are not owner of this Book'
+      redirect_to reviews_path
+    end
   end
 
   # POST /reviews
@@ -69,6 +78,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:title, :rate, :description, :book_id)
+      params.require(:review).permit(:title, :rate, :description, :book_id, :user_id)
     end
 end
