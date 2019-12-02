@@ -22,10 +22,11 @@
 	    <strong><%= review.title %></strong>
 	    <br>
 	    <p><%= review.description %></p>
+	    <p><%= link_to 'More', review %></p>
 	    <p><%= link_to 'Delete', review_path(review), method: :delete, data: { confirm: 'Are you sure?' } %></p>
 	  </div>
 	<% end %>
-	<%= render partial: 'reviews/form', locals: { reivew: @review } %>
+	<%= render partial: 'reviews/form', locals: { review: @review } %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
