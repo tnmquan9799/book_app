@@ -1,13 +1,13 @@
 <body style="background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(<%= asset_path "mainpage.jpg" %>);height: 100%;" >
+<%= form_with(model: book, local: true) do |form| %>
 <section>
  <div class="book-container">
  <div class="container text-center">
-
                 <div class="mt-5 pt-5 title">
-                   
+
                 </div>
                 <div class="mt-5 container-fluid">
-<%= form_with(model: book, local: true) do |form| %>
+
   <% if book.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
@@ -21,13 +21,18 @@
     <%= form.text_field :title ,class:"mt-2 form-title", placeholder: "Title"%>
     <%= form.text_field :author ,class:"mt-2 form-title", placeholder: "Author"%>
     <%= form.text_field :description ,class:"mt-2 form-title", placeholder: "Description"%>
-  </div>
-    <%= form.file_field :picture ,class:"mt-5 picture"%>
+
+  <%= form.file_field :picture ,class:"mt-5 picture"%>
   </div>
   <%= form.hidden_field :user_id , :value => current_user.id %>
   <div class="row mt-5 text-center justify-content-center">
   <%= link_to 'Back', @book, class:"mx-2 back-button d-block"%>
-  <%= form.submit 'Submit' , class:"mx-2 submit-book-button d-block"%>
+  <% if current_page?(new_book_path) %>
+    <%= form.submit 'Create Book' , class:"mx-2 submit-book-button d-block"%>
+  <% else %>
+     <%= form.submit 'Update Book' , class:"mx-2 submit-book-button d-block"%>
+  <% end %>
+
   </div>
 <% end %>
 </div>

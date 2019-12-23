@@ -29,7 +29,7 @@
 	<% @reviews.each do |review| %>
 	  <div class="container review-show">
 	    <p style="padding-top:10px; font-weight:300;font-size:30px"><%= review.title %></p>
-	    <p ><%= review.description %></p>
+	    <p><%= review.description%></p>
 		<div class="d-flex pt-2 button-container">
 	    <p><%= link_to 'More', review,class:"mr-3 more-button" %></p>
 	    <p><%= link_to 'Delete', review_path(review), method: :delete, data: { confirm: 'Are you sure?' } ,class:"mr-2 delete-button" %></p>

@@ -150,14 +150,14 @@ html {
   
   .submit-book-button {
     height: 40px;
-    width: 100px;
+    width: 120px;
     border-radius: 50px;
     background: #f5593d;
     color: #fff;
     font-family: "Helvetica Neue";
     font-weight: 300;
     font-size: 18px;
-    line-height: 2;
+    line-height: 1.5;
     outline: none;
     border: 0px;
   }
