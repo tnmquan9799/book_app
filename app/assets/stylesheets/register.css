@@ -1,12 +1,4 @@
-html {
-  height: 100%;
-}
 
-body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/aerial-architectural-design-architecture-buildings-373912.jpg");
-  background-size: 100%;
-}
 section {
   position: absolute;
   top: 50%;
@@ -73,7 +65,8 @@ section {
   outline: none;
 }
 
-.login-button {
+
+.register-button {
   height: 40px;
   width: 150px;
   border-radius: 50px;

@@ -1,4 +1,5 @@
 
+<body style="background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(<%= asset_path "login.jpg" %>);height: 100%;" >
 <section>
         <div class="login-container">
 
@@ -12,13 +13,13 @@
                      <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class:"mt-5 username", placeholder: "Email"   %>
                      <%= f.password_field :password, autocomplete: "current-password" ,class:"mt-2 password", placeholder: "Password" %>
                       <% if devise_mapping.rememberable? %>
-                      <%= f.check_box :remember_me ,class:"m-2 d-inline" %>
-                      <%= f.label :remember_me %>
+                      <%= f.check_box :remember_me ,class:"m-2" %>
+                      <%= f.label :remember_me, class:"remember-me" %>
                       <% end %>
                     <div class="mt-5 text-center">
                          <%= f.submit "Login" ,class:"container-fluid login-button d-block" %>
                           <% end %>
-                    <div class="mt-5">
+                    <div class="mt-4 ">
                     <%= render "users/shared/links"%>
                     </div>
                     </div>
@@ -27,3 +28,4 @@
             </div>
         </div>
     </section>
+</body>

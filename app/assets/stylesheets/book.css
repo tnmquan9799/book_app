@@ -1,0 +1,214 @@
+/* _______________________________________________index ______________________________________________________________________________*/
+.new-book{
+  padding: 10px;
+    color: #fff;
+    background-color: #333;
+    border-radius:50px ;
+    box-shadow: 0px 2px 5px 0 rgba(27, 23, 26, 0.4);
+    transition: 0.5s;
+}
+.new-book:hover{
+    text-emphasis: none;
+    text-decoration: none;
+    transition: 0.5s;
+    box-shadow: 0px 0px 0px 0 rgba(27, 23, 26, 0.4);
+}
+.books{
+    font-size:  52px;
+    font-weight: 100;
+}
+.table-title{
+    background-color: #333;
+    border-color:#fff ;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+
+}
+.table-book{
+    color: #333;
+}
+.table-book:hover{
+    text-emphasis: none;
+    text-decoration: none;
+    color:rgb(0, 180, 255);
+    cursor: pointer;
+}
+
+/* _______________________________________________ SHOW ______________________________________________________________________________*/
+.show-details{
+    /* background-color: #333;
+    color:#fff */
+}
+
+.show-img{
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+.review-title{
+    background-color: #333;
+    padding: 10px;
+    font-weight: 200;
+    color:#fff;
+    position: absolute;
+    left: -1px;
+    
+}
+.button-container{
+    border-top: 1px solid #fff;
+    margin-bottom: 20px;
+}
+.more-button{
+    color: #fff;
+}
+.more-button:hover{
+    color:rgb(0, 180, 255);
+    text-decoration: none;
+}
+.delete-button{
+    color: #fff;
+}
+.delete-button:hover{
+    text-decoration: none;
+    color:rgb(0, 180, 255);
+}
+.option-button-container{
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    background-color: #f5593d;
+    color: #fff;
+
+}
+.option-button-edit{
+    color: #fff;
+}
+.option-button-edit:hover{
+    color:rgb(0, 180, 255);
+    text-decoration: none;
+}
+.option-button-back{
+    color: #fff;
+}
+.option-button-back:hover{
+    color:rgb(0, 180, 255);
+    text-decoration: none;
+}
+
+
+
+
+/* _______________________________________________ FORM ______________________________________________________________________________*/
+
+html {
+    height: 100%;
+    
+  }
+  
+  section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin-right: -50%; */
+    transform: translate(-50%, -50%);
+  }
+  
+  .book-container {
+    height: 500px;
+    width: 350px;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .title {
+    font-family: "Helvetica Neue";
+    font-weight: 200;
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+  
+  }
+  
+  .form-title {
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    font-size: 18px;
+    height: 40px;
+    width: 90%;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding-left: 10px;
+    color: #333;
+    outline-width: 0;
+    outline: none;
+  }
+  .username:focus {
+    outline: none;
+  }
+  
+  
+  .submit-book-button {
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
+    background: #f5593d;
+    color: #fff;
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 2;
+    outline: none;
+    border: 0px;
+  }
+  .submit-book-button:focus{
+    outline: none;
+  }
+  .back-button{
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
+    background: #f5593d;
+    color: #fff;
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 2.2;
+    outline: none;
+    border: 0px;
+  }
+  .back-button:hover{
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .picture{
+    height: 40px;  
+    width: 100px;
+    border-radius: 50px;
+    background: #f5593d;
+    color: #fff;
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 2;
+    outline: none;
+    transition: 0.3s;
+    
+  }
+  .picture:hover{
+    height: 40px;
+    width: 225px;
+    border-radius: 50px;
+    background: #f5593d;
+    color: #fff;
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 2;
+    outline: none;
+    border: 0px;
+    transition: 0.3s;
+  }
+  

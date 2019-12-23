@@ -1,0 +1,24 @@
+.resend-button{
+    height: 40px;
+    width: 200px;
+    border-radius: 50px;
+    background: #f5593d;
+    color: #fff;
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 2;
+    outline: none;
+    border: 0px;
+}
+.resend-button:focus{
+    outline: none;
+}
+.share-link{
+   height: 10px;
+}
+.notify{
+    font-size: 20px;
+    color: #fff;
+
+}

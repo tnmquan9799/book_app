@@ -1,33 +1,41 @@
-<p>
+
+<div class="mt-5 row">
+
+
+<p class="col-md-10">
+  <%= image_tag(@book.picture_url, class:"show-img") if @book.picture.present? %>
+</p>
+<p class="col-md-2 show-details ">
   <strong>Title:</strong>
   <%= @book.title %>
-</p>
-
-<p>
+<br>
   <strong>Author:</strong>
-  <%= @book.author %>
-</p>
-
-<p>
+  <%= @book.author %>	
+<br>
+<br>
   <strong>Description:</strong>
-  <%= @book.description %>
+  <%= @book.description %> 
 </p>
-
+</div>	
+<div class="option-button-container text-center d-inline">
+<%= link_to 'Edit', edit_book_path(@book),class:"option-button-edit" %> |
+<%= link_to 'Back', books_path ,class:"option-button-back"%>
+</div>
+ <%= render partial: 'reviews/form', locals: { review: @review } %>
+ 
 <p>
-  <strong>Picture:</strong>
-  <%= image_tag(@book.picture_url, width: 400) if @book.picture.present? %>
-  <h3>Reviews</h3>
+<h3 class="mt-5 container-fluid review-title text-center h1 font-weight-lighter">Reviews</h3>
+	<div style="margin-top:200px">
 	<% @reviews.each do |review| %>
-	  <div>
-	    <strong><%= review.title %></strong>
-	    <br>
-	    <p><%= review.description %></p>
-	    <p><%= link_to 'More', review %></p>
-	    <p><%= link_to 'Delete', review_path(review), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+	  <div class="container review-show">
+	    <p style="padding-top:10px; font-weight:300;font-size:30px"><%= review.title %></p>
+	    <p ><%= review.description %></p>
+		<div class="d-flex pt-2 button-container">
+	    <p><%= link_to 'More', review,class:"mr-3 more-button" %></p>
+	    <p><%= link_to 'Delete', review_path(review), method: :delete, data: { confirm: 'Are you sure?' } ,class:"mr-2 delete-button" %></p>
+		</div>
 	  </div>
+	</div>
 	<% end %>
-	<%= render partial: 'reviews/form', locals: { review: @review } %>
+	</div>
 </p>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>

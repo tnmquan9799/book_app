@@ -54,6 +54,10 @@ section {
 .password:focus {
   outline: none;
 }
+.remember-me{
+  color: #fff;
+  display: inline-flex;
+}
 
 .login-button {
   height: 40px;

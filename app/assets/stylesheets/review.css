@@ -1,0 +1,44 @@
+
+.review-form-title{
+font-weight: 200;
+width:200px;
+color: #333;
+margin-top: 20px;
+background-color: #333;
+padding:10px;
+border: 1px;
+border-radius: 50px;
+color: #fff;
+outline-width: 0;
+}
+
+.review-form-description{
+    font-weight: 200;
+    width:405px;
+    background-color: #333;
+    padding:10px;
+    border: 1px;
+    border-radius: 25px;
+    color: #fff;
+    margin-top: 20px;
+    outline-width: 0;
+}
+.review-show{
+    background-color: #333;
+    color: #fff;
+    display: block;
+    border-radius: 20px;
+    display: block;
+}
+.create-review-button{
+    font-family: "Helvetica Neue" !important;
+    color: #fff;
+    background-color: #f5593d;
+    border-radius: 50px;
+    padding: 8px;
+    font-weight: 100s;
+    outline: none;
+}
+.create-review-button:hover{
+    color:rgb(0, 180, 255);
+}

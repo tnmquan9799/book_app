@@ -12,9 +12,32 @@
  *
  *= require_tree .
  *= require_self
+*= require font-awesome
  */
+html{
+  scroll-behavior: smooth;
+  
+}
 
+@import "font-awesome";
 footer { margin-top: 600px; }
+body {
+    font-family: "Helvetica Neue";
+    font-weight: 150;
+    font-size: 20px;
+   
+}
+.navbar-style{
+    background-color:#333 ;
+    color: #fff;
+
+  }
+  .brand-book{
+    font-family: "Helvetica Neue";
+    font-size: 25px;
+    font-weight: 100;
+    
+  }
 /* table, td, th { vertical-align: middle; border: none; } */
 /* th { border-bottom: 1px solid #DDD; } */
 

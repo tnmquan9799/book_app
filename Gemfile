@@ -12,7 +12,7 @@ end
 group :production do
   gem 'pg'
 end
-
+gem "font-awesome-rails"
 gem 'carrierwave'
 gem 'devise'
 # Use Puma as the app server

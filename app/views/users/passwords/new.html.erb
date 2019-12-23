@@ -1,16 +1,44 @@
-<h2>Forgot your password?</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+
+<body style="background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(<%= asset_path "login.jpg" %>);height: 100%;" >
+<section>
+        <div class="login-container">
+
+            <div class="container text-center">
+
+                <div class="mt-5 title">
+                    Reset Password
+                    <div>
+                    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+                    <div class="notify">
+  <% if resource.errors.any? %>
+  <div class="alert alert-danger position-fixed" role="alert" style="width:90%"
+  id="error_explanation">
+      <% resource.errors.full_messages.each do |message| %>
+        <%= message %>
+      <% end %>
   </div>
 <% end %>
+</div>
+                    </div>
+                </div>
+                <div class="mt-5 container-fluid">
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),class:"mt-5 username", placeholder: "Email"%>
+                    <div class="mt-5 text-center">
+                         <%= f.submit "Reset Password" ,class:"mt-5 container-fluid d-block resend-button " %>
+                          <% end %>
+                    <div class="mt-5  pt-3">
+                    <%= render "users/shared/links" %>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
 
-<%= render "users/shared/links" %>
+
+
