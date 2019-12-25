@@ -4,27 +4,27 @@
 <div class="container-fluid justify-content-between d-inline-flex m-0 p-0">
 <div class="my-4 books">Books</div>
 
-<%= link_to 'Add', new_book_path, class:"my-5 new-book"%>
+<%= link_to 'New Book', new_book_path, class:"my-5 new-book"%>
 </div>
 
 
 <table class="table table-bordered mt-5 container-fluid">
   <thead>
     <tr class="row px-3">
-      <th class="col-md-3 table-title">Title</th>
-      <th class="col-md-3 table-title">Author</th>
-      <th class="col-md-3 table-title"></th>
-      <th class="col-md-3 table-title"></th>
+      <th class="col-md-3 table-title text-center container-fluid">Title</th>
+      <th class="col-md-3 table-title text-center container-fluid">Author</th>
+      <th class="col-md-3 table-title text-center container-fluid">Edit</th>
+      <th class="col-md-3 table-title text-center container-fluid">Destroy</th>
     </tr>
   </thead>
 
   <tbody>
     <% @books.each do |book| %>
       <tr class="row px-3">
-        <td class="col-md-3 table-book"><%= link_to book.title, book,class:"table-book" %></td>
-        <td class="col-md-3"><%= book.author %></td>
-        <td class="col-md-3 table-book"><%= link_to  'Edit', edit_book_path(book) ,class:"table-book"  %></td>
-        <td class="col-md-3 table-book"><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' },class:"table-book" %></td>
+        <td class="col-md-3 table-book text-center container-fluid"><%= link_to book.title, book,class:"table-book text-center container-fluid" %></td>
+        <td class="col-md-3 text-center container-fluid"><%= book.author %></td>
+        <td class="col-md-3 table-book"><%= link_to  edit_book_path(book) do %> <i class="fas fa-edit table-book text-center container-fluid"></i></td> <%end%>
+        <td class="col-md-3 table-book"><%= link_to  book, method: :delete, data: { confirm: 'Are you sure?' } do %> <i class="fas fa-trash destroy-book text-center container-fluid"> </i></td> <%end%>
       </tr>
     <% end %>
   </tbody>

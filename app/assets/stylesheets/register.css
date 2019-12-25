@@ -92,3 +92,60 @@ section {
 .login-link:hover {
   color: #fff;
 }
+
+/* ____________________________________________________ Edit_User ________________________________________________________ */
+
+.user-email{
+  margin: 10px;
+  font-weight: 200;
+width:300px;
+color: #333;
+background-color: #333;
+padding:5px 10px 5px 10px;
+border: 1px;
+border-radius: 50px;
+color: #fff;
+outline-width: 0;
+}
+.user-email:root{
+  background-color: #333;
+}
+.user-title{
+  margin-right: 110px;
+  margin-top: 10px;
+}
+
+.update-button{
+  height: 40px;
+  width: 150px;
+  border-radius: 50px;
+  background: #f5593d;
+  color: #fff;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 2;
+  outline: none;
+  border: 0px;
+}
+.update-button:focus{
+  outline: none;
+}
+
+.cancel-button{
+  height: 40px;
+  width: 250px;
+  border-radius: 50px;
+  background: #f5593d;
+  color: #fff;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 2;
+  outline: none;
+  border: 0px;
+}
+.cancel-button:focus{
+  outline: none;
+}
+
