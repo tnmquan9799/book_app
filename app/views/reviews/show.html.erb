@@ -18,5 +18,7 @@
   <%= @review.book_id %>
 </p>
 
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', book_path(@review.book_id) %>
+<div class="option-button-container text-center d-inline">
+<%= link_to 'Edit', edit_review_path(@review) ,class:"option-button-edit"%> |
+<%= link_to 'Back', book_path(@review.book_id) ,class:"option-button-back"%>
+</div>
